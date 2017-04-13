@@ -1,0 +1,167 @@
+@import "variables.less";
+@import "mixins.less";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    padding-bottom: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all .3s ease-in-out;
+}
+
+.home-wrapper {
+
+
+    .logo {
+        text-align: center;
+
+        a {
+            padding-top: 50px;
+            padding-bottom: 20px;
+            display: block;
+            transition: background-color 1s ease-in-out;
+
+            &:hover {
+                background-color: rgba(235, 177, 17, 0.7);
+                transition: background-color 1s ease-in-out;
+            }
+        }
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+        .navitem {
+            position: relative;
+            padding: 20px;
+
+            &:not(:first-child) {
+
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    top: 40%;
+                    left: -5px;
+                    background: url('img/blackdiamond.png') no-repeat center center;
+                }
+            }
+
+
+            a {
+                color: @main-color;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    .hover(@primary-color);
+                }
+            }
+        }
+    }
+
+    .categories {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        .catitem {
+            padding: 20px;
+
+            a {
+                color: @main-color;
+                text-transform: uppercase;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    .hover(@primary-color);
+                }
+            }
+        }
+    }
+
+    .hero {
+        margin-bottom: 50px;
+        text-align: center;
+
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    footer {
+        padding: 30px;
+        color: @footer-color;
+        background-color: @footer-bg-color;
+
+        .contact {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h4 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 0;
+
+            a {
+                color: @footer-color;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    .hover(@primary-color);
+                }
+            }
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+
+            .social-button a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin: 0 5px;
+                padding: 0;
+                text-align: center;
+                background-color: #fff;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: @primary-color;
+                    transition: all .3s ease-in-out;
+                }
+
+                img {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        p.copyright {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}
