@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-a {
+a.link {
     padding-bottom: 3px;
     text-decoration: none;
     cursor: pointer;
@@ -25,7 +25,7 @@ a {
 
         a {
             padding-top: 50px;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
             display: block;
             transition: background-color 1s ease-in-out;
 
@@ -39,67 +39,65 @@ a {
     .navbar {
         display: flex;
         justify-content: center;
-        margin-top: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
 
-        .navitem {
-            position: relative;
-            padding: 20px;
+    .navitem {
+        position: relative;
+        padding: 20px;
 
-            &:not(:first-child) {
+        &:not(:first-child) {
 
-                &:before {
-                    content: "";
-                    display: block;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 40%;
-                    left: -5px;
-                    background: url('img/blackdiamond.png') no-repeat center center;
-                }
+            &:before {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 40%;
+                left: -5px;
+                background: url('img/blackdiamond.png') no-repeat center center;
             }
+        }
 
 
-            a {
-                color: @main-color;
+        a {
+            color: @main-color;
 
-                &:hover,
-                &:focus,
-                &:active {
-                    .hover(@primary-color);
-                }
+            &:hover,
+            &:focus,
+            &:active {
+                .hover(@primary-color);
             }
         }
     }
 
     .categories {
         display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
-
-        .catitem {
-            padding: 20px;
-
-            a {
-                color: @main-color;
-                text-transform: uppercase;
-
-                &:hover,
-                &:focus,
-                &:active {
-                    .hover(@primary-color);
-                }
-            }
-        }
+        justify-content: space-between;
+        width: 800px;
+        margin: 0 auto 40px;
     }
 
-    .hero {
-        margin-bottom: 50px;
-        text-align: center;
+    .category {
+        width: 30%;
+        // border: 4px solid @primary-color;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: transform .3s ease-in-out;
+        }
+        // box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 1);
+
+        a {
+            display: block;
+        }
 
         img {
-            border-radius: 20px;
+            width: 100%;
         }
     }
 
